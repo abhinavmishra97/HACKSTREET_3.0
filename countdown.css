@@ -1,0 +1,156 @@
+.countdown-container {
+  
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 5;
+   min-height: 200px;
+   background: rgba(255, 255, 255, 0.05);
+   backdrop-filter: blur(10px);
+   border-radius: 20px;
+  
+   box-shadow: 
+       0 8px 32px rgba(0, 0, 0, 0.3),
+       0 0 64px rgba(87, 201, 255, 0.1);
+   width: 30%; 
+   padding-bottom: 20px;
+   position: absolute;
+    top: 70%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.coming-soon {
+   font-size: 2.5rem;
+   /* margin-bottom: 5rem; */
+   font-weight: 300;
+   letter-spacing: 0.3em;
+   text-transform: uppercase;
+   text-align: center;
+   background: linear-gradient(120deg, #fff, #87CEFA);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+   0% {
+       text-shadow: 
+           0 0 20px rgba(135, 206, 250, 0.5),
+           0 0 40px rgba(135, 206, 250, 0.3);
+   }
+   100% {
+       text-shadow: 
+           0 0 40px rgba(135, 206, 250, 0.7),
+           0 0 80px rgba(135, 206, 250, 0.5);
+   }
+}
+
+#countdown {
+   display: flex;
+   gap: 2.5rem;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.countdown-item {
+   width: 60px;
+   background: rgba(255, 255, 255, 0.08);
+   border-radius: 15px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   transition: transform 0.3s ease;
+   padding-bottom: 2.5%;
+   padding-right:2%;
+}
+
+
+.countdown-item:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(87, 201, 255, 0.2);
+}
+
+.number {
+ font-size: 35px;
+ font-weight: 700;
+ margin-bottom: 0.5rem;
+ text-align: center;
+ background: linear-gradient(to bottom,#1a1f36,#283048);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ text-shadow: 0 0 20px rgba(135, 206, 250, 0.5),
+   0 0 40px rgba(135, 206, 250, 0.3);
+}
+
+.label {
+ font-size: 0.6rem;
+ text-transform: uppercase;
+ letter-spacing: 0.2em;
+ text-align: center;
+ color: rgba(0, 0, 0, 0.947);
+ font-weight: 300;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+ .countdown-container {
+   padding: 2rem 1.5rem;
+ }
+
+ .coming-soon {
+   font-size: 2.5rem;
+   letter-spacing: 0.2em;
+   margin-bottom: 2rem;
+ }
+
+ #countdown {
+   gap: 1.5rem;
+ }
+
+ .countdown-item {
+   min-width: 100px;
+   padding: 1rem;
+ }
+
+ .number {
+   font-size: 3.5rem;
+ }
+
+ .label {
+   font-size: 0.875rem;
+   letter-spacing: 0.15em;
+ }
+}
+
+@media screen and (max-width: 480px) {
+
+
+ .coming-soon {
+   font-size: 2rem;
+   letter-spacing: 0.15em;
+   margin-bottom: 1.5rem;
+ }
+
+ #countdown {
+   gap: 1rem;
+ }
+
+ .countdown-item {
+   min-width: calc(50% - 1rem);
+   padding: 0.875rem;
+ }
+
+ .number {
+   font-size: 2.5rem;
+ }
+
+ .label {
+   font-size: 0.75rem;
+   letter-spacing: 0.1em;
+ }
+}
+

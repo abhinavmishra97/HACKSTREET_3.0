@@ -1,0 +1,68 @@
+/* About Section Styles */
+.about {
+    position: absolute; /* Position it relative to the viewport */
+    width: 90vw; /* Use the full width of the viewport */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 40px; /* Padding for inner spacing */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 64px rgba(87, 201, 255, 0.1);
+    z-index: 5;
+    left: 0; /* Align to the left of the viewport */
+    top: 90%; /* Adjust this value as needed */
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+.abouthackstreet {
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Ensure full width of parent */
+}
+
+.abouthackstreet h1 {
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    background: linear-gradient(120deg, #fff, #87CEFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 
+        0 0 20px rgba(135, 206, 250, 0.5),
+        0 0 40px rgba(135, 206, 250, 0.3);
+    animation: titlePulse 3s ease-in-out infinite alternate;
+    position: static;
+}
+
+.abouthackstreet p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 100%;
+    margin: 0 auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+}
+
+/* Animation for the title */
+@keyframes titlePulse {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+/* Hover effect for the about section */
+.about:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}

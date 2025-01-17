@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Preloader container */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Using viewport height */
+    background: linear-gradient(120deg, #0d1b2a, #28284a, #356b4d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    
+}
+
+/* Preloader hidden state */
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Image styling */
+#preloader img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    animation: fadeInOut 2s ease forwards;
+}
+
+/* Responsive image sizes for different screens */
+@media screen and (max-width: 768px) {
+    #preloader img {
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #preloader img {
+        max-width: 120px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+    #preloader img {
+        max-width: 100px;
+    }
+}
+
+/* Fade-in-out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Prevent scrolling while preloader is active */
+body.preloader-active {
+    overflow-x: hidden;
+}

@@ -1,0 +1,230 @@
+/* Footer Section */
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to right, #00394d, #007a99);
+  color: white;
+  padding: 10px 20px; /* Reduced padding to minimize height */
+}
+
+.footer-title {
+  font-size: 2.2rem; /* Slightly reduced font size */
+  margin: 45px 50px; /* Reduced margin to minimize space around title */
+}
+
+/* Footer Column Styling */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 5px; /* Reduced margin */
+  flex-grow: 1;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem; /* Reduced font size for compactness */
+  text-transform: uppercase;
+  color: #70e2ff;
+  margin-bottom: 15px; /* Reduced space below headings */
+  padding-right: 210px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 0.85rem; /* Slightly smaller font size */
+  color: white;
+  text-decoration: none;
+  margin: 2px 0; /* Reduced margin between lines */
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #a3daff;
+  text-shadow: 0 0 10px #7edef6;
+  text-decoration: underline;
+}
+
+.footer-column p svg {
+  vertical-align: middle;
+}
+
+/* Social Media Icons */
+.footer .social-icons {
+  display: flex;
+  gap: 15px; /* Reduced space between icons */
+  padding-left: 0; /* Removed extra padding */
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 28px; /* Slightly smaller icon size */
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer .social-icons a img {
+  width: 100%;
+  height: auto;
+}
+
+.footer .social-icons a:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
+
+/* Responsive Styles for Mobile Devices */
+
+@media screen and (max-width: 1024px) {
+  .footer{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .footer-title {
+    font-size: 2rem;
+    margin-left: 30px;
+    margin-top: 37px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.28rem;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.65rem;
+  }
+
+  .footer .social-icons {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 768px) {
+  .footer {
+    flex-wrap: wrap; /* Allow columns to wrap */
+    padding: 10px 5px; /* Further reduced padding */
+    justify-content: center; /* Center-align content */
+  }
+
+  .footer-title {
+    font-size: 1.6rem; /* Slightly smaller font size */
+  margin-top: 20px;
+  margin-left: 140px;
+    text-align: center; /* Center the title */
+  }
+
+  .footer-column {
+    flex-basis: 45%; /* Two columns side by side */
+    margin: 3px 3px; /* Minimal spacing between columns */
+    text-align: center; /* Center-align column content */
+  }
+
+  .footer-column h3 {
+    font-size: 1.1rem; /* Slightly smaller heading size */
+    margin-bottom: 3px; /* Reduced space below headings */
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.75rem; /* Smaller text for compactness */
+    margin: 1px 0; /* Tighter spacing between lines */
+  }
+
+  .footer .social-icons {
+    justify-content: center; /* Center social icons */
+    gap: 8px; /* Reduced spacing between icons */
+    margin-top: 5px; /* Minimal space above social icons */
+  }
+
+  .footer .social-icons a {
+    width: 22px; /* Even smaller icon size */
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 766px) and (min-width: 577px) {
+  .footer {
+    flex-wrap: wrap; /* Allow wrapping for better fit */
+    padding: 15px; /* Balanced padding */
+    justify-content: center; /* Center-align columns */
+  }
+
+  .footer-title {
+    font-size: 1.7rem; /* Adjusted font size for smaller devices */
+    margin: 20px 80px; /* Compact spacing */
+    text-align: center; /* Centered title */
+  }
+
+  .footer-column {
+    flex-basis: 48%; /* Two columns per row */
+    margin: 5px; /* Minimal spacing between columns */
+    text-align: center; /* Center-align column content */
+  }
+
+  .footer-column h3 {
+    font-size: 1.2rem; /* Slightly smaller headings */
+    margin-bottom: 4px; /* Reduced space below headings */
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.8rem; /* Smaller font for compactness */
+    margin: 3px 0; /* Tighter spacing between text lines */
+  }
+
+  .footer .social-icons {
+    justify-content: center; /* Center social icons */
+    gap: 12px; /* Reduced spacing between icons */
+    margin-top: 10px; /* Minimal space above social icons */
+  }
+
+  .footer .social-icons a {
+    width: 25px; /* Slightly smaller icon size */
+    height: 25px;
+  }
+}
+
+
+/* For tablets and medium devices (576px and below) */
+@media screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0; /* Reduced padding for compactness */
+  }
+
+  .footer-title {
+    font-size: 1.5rem; /* Slightly smaller font for compactness */
+    margin: 0px 0; /* Minimized top and bottom margin */
+    text-align: center;
+  }
+
+  .footer-column {
+    flex-basis: 100%; /* Full width for each column */
+    margin: 5px 0; /* Reduced space between columns */
+    text-align: center; /* Center-align content */
+  }
+
+  .footer-column h3 {
+    font-size: 1rem; /* Reduced heading font size */
+    margin-bottom: 3px; /* Minimized spacing below headings */
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.8rem; /* Smaller font for text */
+    margin: 1px 0; /* Reduced spacing between lines */
+  }
+
+  .footer .social-icons {
+    gap: 6px; /* Reduced gap between icons */
+    margin-top: 5px; /* Minimal space above social icons */
+  }
+
+  .footer .social-icons a {
+    width: 20px; /* Smaller icon size */
+    height: 20px;
+  }
+}

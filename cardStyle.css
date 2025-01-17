@@ -1,0 +1,126 @@
+/* Cards Container */
+.cards-container {
+  position: relative;
+  margin-top: 38%;
+  width: 100%;
+  height: 400px; /* Fixed height to contain absolute elements */
+  left: 1%;
+}
+
+/* Cards Wrapper */
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200%;
+  position: absolute;
+  gap: 15px;
+  top: 35%;
+}
+
+/* Heading Styles */
+.cards-container h2 {
+  position: absolute;
+  top: 18%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 5rem;
+  background: linear-gradient(120deg, #fff, #87CEFA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow:
+    0 0 20px rgba(135, 206, 250, 0.5),
+    0 0 40px rgba(135, 206, 250, 0.3);
+  font-family: 'Frozen', sans-serif;
+  z-index: 100;
+  width: 100%;
+}
+
+/* Glow Animation for Title */
+@keyframes themesTitleGlow {
+  0% {
+    text-shadow:
+      0 0 20px rgba(135, 206, 250, 0.5),
+      0 0 40px rgba(135, 206, 250, 0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 40px rgba(135, 206, 250, 0.7),
+      0 0 80px rgba(135, 206, 250, 0.5);
+  }
+}
+
+/* Card Styles */
+.card_style {
+  z-index: 100;
+  width: 200px;
+  height: 300px;
+}
+
+/* Hover Area */
+.card-hover-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-hover-area:hover .card-inner {
+  transform: rotateY(180deg); /* Trigger flip */
+}
+
+/* Card Inner */
+.card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Front and Back */
+.card-front,
+.card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Images */
+.card-front img,
+.card-back img {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Text Styles */
+.card-front span {
+  color: rgb(223, 223, 241); 
+  font-size: 20px;
+  font-family: 'Silkscreen', sans-serif; 
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 8;
+}
+
+
+.card-back span {
+  margin-left:20px;
+  color: rgb(228, 228, 241); 
+  font-size: 16px; 
+  font-family: 'Silkscreen', sans-serif;  
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+z-index: 8;
+}

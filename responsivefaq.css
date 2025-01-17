@@ -1,0 +1,454 @@
+/* FAQ Section */
+.faq {
+    left:7%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;  
+    position:relative;
+    margin-top: 4%;
+    gap:10px;
+    /* background: linear-gradient(to right, #11121725, #5da9cd80);
+    border: 2px solid rgba(255, 255, 255, 0.4); */
+    /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); */
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h3{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Frozen';
+    
+    margin-top: 10%;
+    color: #bbdef1;
+    text-shadow: 0 0 20px #a3daff, 0 0 40px #4e98b28c;
+
+}
+
+.faq h3 {
+   
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Frozen';
+    margin-bottom: 25px;
+    margin-top: 8px;
+    color: #bbdef1;
+    text-shadow: 0 0 20px #a3daff, 0 0 40px #4e98b28c;
+}
+
+/* FAQ Box Styling */
+.faqbox {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  position: relative;
+    background: linear-gradient(to right, #3ed6fc4d, #3eafc3bd);
+    
+    border-radius: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.5s ease, background 0.3s ease, box-shadow 0.5s ease;
+    width: 90%;
+    padding: 5px;
+    gap:20%;
+   
+}
+
+.faqbox:hover {
+    transform: scale(1.02);
+    background: linear-gradient(to right, #00a3cc, #0080a3);
+    box-shadow: 0 0 30px rgba(163, 218, 255, 0.7);
+}
+
+/* FAQ Title Styling */
+.faqbox span {
+    font-size: 1.4rem;
+    color: #e0f7ff;
+   flex: 1;
+}
+
+/* Image Styling */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.image {
+    border-radius: 12px;
+    max-width: 100px;
+    height: auto;
+}
+
+/* FAQ SVG Styling */
+.faqbox svg {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    fill: #a3daff;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 90%;
+}
+
+/* FAQ Answer Styling */
+.answer {
+    display: none;
+    background: linear-gradient(to right, #007a99, #004d66);
+    border-radius: 10px;
+    padding: 15px;
+    color: #e0f7ff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(163, 218, 255, 0.5);
+    animation: slideDown 0.8s ease-in-out;
+    margin-right: 15%;
+    margin-left: 0%;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .faq h3 {
+        font-size: 2rem;
+    }
+
+    .faqbox {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;  /* Align the content vertically */
+        justify-content: space-between;  /* Space between the image and the text */
+        padding: 15px;
+        height: auto; /* Adjusts height based on content */
+    }
+
+    .faqbox svg {
+        position: absolute;
+        right: 40px; /* Align SVG to the right */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .faqbox span {
+        font-size: 1.3rem;
+        text-align: left;
+        margin-left: 15px;
+        flex-grow: 1;
+    }
+
+    img {
+        max-width: 80px;
+        height: auto;
+        margin-right: 15px;
+    }
+
+    .answer {
+        display: none;
+        width: 100%;
+        background: linear-gradient(to right, #007a99, #004d66);
+        border-radius: 10px;
+        color: #e0f7ff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(163, 218, 255, 0.5);
+        animation: slideDown 0.8s ease-in-out;
+        padding: 15px;
+        margin-top: -10%;
+        margin-bottom: 0%;
+        margin-left: 13%; /* Align with the container */
+        position: relative; /* Makes sure answer is placed inside the box */
+    }
+
+    /* Optional: Add some style for the sliding transition of the answer */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media (max-width: 830px) and (min-width: 769px) {
+    .faq h3 {
+        font-size: 2.5rem;  /* Slightly smaller heading */
+    }
+
+    .faqbox {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .faqbox svg {
+        position: absolute;
+        right: 14px;
+        top: 47%;
+        transform: translateY(-50%);
+        width: 28px;  /* Slightly smaller SVG */
+        height: 28px;
+        fill: #a3daff;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .faqbox span {
+        font-size: 1.4rem;  /* Adjust text size for better readability */
+        margin-left: -48px;
+    }
+
+    img {
+        max-width: 80px;  /* Make the image slightly smaller */
+        height: auto;
+    }
+
+    .answer {
+        display: none;
+        width: 100%;
+        background: linear-gradient(to right, #007a99, #004d66);
+        border-radius: 10px;
+        color: #e0f7ff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(163, 218, 255, 0.5);
+        animation: slideDown 0.8s ease-in-out;
+        padding: 12px;
+        margin-top: -70px;
+        margin-bottom: 10px;
+        margin-left: 98px;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+@media (max-width: 768px){
+    .faq h3 {
+        font-size: 2.2rem;  /* Smaller heading for better fit */
+    }
+
+    .faqbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        height: auto;
+        margin-bottom: 10px; /* Space between FAQ items */
+
+    }
+
+    .faqbox svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 28px;  /* Smaller icon for balance */
+        height: 28px;
+        fill: #a3daff;
+        transition: transform 0.3s ease-in-out;
+        right: 10px; /* Adjust position slightly */
+    }
+
+    .faqbox span {
+        font-size: 1.4rem;  /* Adjust text size */
+        margin-left: -10%;
+        margin-right: 0;
+        flex-grow: 1;
+    }
+
+    img {
+        max-width: 70px;  /* Reduce image size for better fitting */
+        height: auto;   
+    }
+
+    .answer {
+        display: none;
+        background: linear-gradient(to right, #007a99, #004d66);
+        border-radius: 10px;
+        color: #e0f7ff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(163, 218, 255, 0.5);
+        animation: slideDown 0.8s ease-in-out;
+        padding: 12px;
+        margin-top: -75px;
+        margin-bottom: 4px;
+        margin-left: 100px;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+@media (max-width: 480px){
+    .faq h3 {
+        font-size: 2.2rem;  /* Smaller heading for better fit */
+    }
+
+    .faqbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        height: auto;
+        margin-bottom: 10px; /* Space between FAQ items */
+
+    }
+
+    .faqbox svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;  /* Smaller icon for balance */
+        height: 20px;
+        fill: #a3daff;
+        transition: transform 0.3s ease-in-out;
+        right: 10px; /* Adjust position slightly */
+    }
+
+    .faqbox span {
+        font-size: 0.8rem;  /* Adjust text size */
+        margin-right: 28px;
+    }
+
+    img {
+        max-width: 70px;  /* Reduce image size for better fitting */
+        height: auto;   
+    }
+
+    .answer {
+        display: none;
+        background: linear-gradient(to right, #007a99, #004d66);
+        border-radius: 10px;
+        color: #e0f7ff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(163, 218, 255, 0.5);
+        animation: slideDown 0.8s ease-in-out;
+        padding: 12px;
+        margin-top: -75px;
+        margin-bottom: 4px;
+        margin-left: 100px;
+        font-size: 0.6rem;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media (max-width: 420px) and (min-width:320px){
+    .faq h3 {
+        font-size: 2.2rem;  /* Smaller heading for better fit */
+    }
+
+    .faqbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        height: auto;
+        margin-bottom: 10px; /* Space between FAQ items */
+        width: 90%;
+
+    }
+
+    .faqbox svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;  /* Smaller icon for balance */
+        height: 20px;
+        fill: #a3daff;
+        transition: transform 0.3s ease-in-out;
+        right: 10px; /* Adjust position slightly */
+    }
+
+    .faqbox span {
+        font-size: 0.7rem;  /* Adjust text size */
+        margin-right: 28px;
+        margin-left: -35px;
+    }
+
+    img {
+        max-width: 70px;  /* Reduce image size for better fitting */
+        height: auto;   
+    }
+
+    .answer {
+        display: none;
+        background: linear-gradient(to right, #007a99, #004d66);
+        border-radius: 10px;
+        color: #e0f7ff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(163, 218, 255, 0.5);
+        animation: slideDown 0.8s ease-in-out;
+        padding: 12px;
+        margin-top: -75px;
+        margin-bottom: 4px;
+        margin-left: 100px;
+        font-size: 0.5rem;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

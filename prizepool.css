@@ -1,0 +1,280 @@
+
+
+
+
+  .container_prize{
+    margin-top:50%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #44337a, #000000, #065f46);
+    margin-right:28%;
+   
+    z-index: 11;
+  }
+
+  .star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .card{
+    width: 35vw;
+    height: 180px;
+    margin: 50px;
+  }
+
+  .title {
+    
+    font-size: 4rem;
+    font-weight: bold;
+    color: #9ee6f5; /* Icy blue color */
+    text-align: center;
+    padding: 2rem 0;
+    text-shadow: 0 0 10px rgba(138, 221, 238, 0.992), 0 0 20px rgb(95, 220, 245); /* Glow effect */
+  }
+
+  .rewards-container {
+    flex: 1;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+
+@media (max-width: 1024px) {
+.rewards-container {
+  margin-top: 20%;
+  padding: 2rem;
+  max-width: 90%;
+}
+
+.penguin-container {
+  width: 25rem;
+  height: 25rem;
+}
+
+.cards-container-pool {
+  width: 100%;
+  
+}
+
+.card-content {
+  padding: 1.5rem;
+  width:100%;
+}
+
+.card-text h3 {
+  font-size: 1.25rem;
+}
+
+.card-text p {
+  font-size: 1rem;
+}
+}
+
+@media (max-width: 768px) {
+.title {
+  font-size: 2.5rem;
+}
+
+.penguin-container {
+  width: 20rem;
+  height: 20rem;
+}
+
+.cards-container {
+  gap: 1rem;
+}
+
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-text h3 {
+  font-size: 1.125rem;
+}
+
+.card-text p {
+  font-size: 0.9rem;
+}
+}
+
+@media (max-width: 480px) {
+.content {
+  justify-content: center; /* Vertically center the content */
+  padding: 1rem; /* Add padding around the content */
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0 auto 0rem; /* Center the title and add spacing below it */
+  line-height: 0; /* Adjust line height for better spacing */
+}
+
+.rewards-container {
+  margin-top: 1rem; /* Add spacing between the title and the rewards */
+}
+
+.rewards-container {
+  padding: 1rem;
+  max-width: 95%;
+}
+
+.penguin-container {
+  width: 15rem;
+  height: 15rem;
+}
+
+.cards-container {
+  gap: 0.75rem;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.icon-container {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card-text h3 {
+  font-size: 1rem;
+}
+
+.card-text p {
+  font-size: 0.85rem;
+}
+}
+
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100vw); /* Start from outside the screen on the left */
+      opacity: 0;
+    }
+    50% {
+      opacity: 1; /* Gradually make it visible */
+    }
+    100% {
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .penguin-container {
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0;
+    background: none;
+    animation: slideIn 2s ease-out; /* Apply the animation */
+  }
+
+  .penguin-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+    filter: drop-shadow(0 0 15px rgba(135, 206, 250, 0.6));
+  }
+
+  .cards-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card {
+    background-color: rgba(31, 41, 55, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .icon-container {
+    padding: 1rem;
+    border-radius: 50%;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .card-text h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-text p {
+    color: rgb(209, 213, 219);
+    font-size: 1.125rem;
+  }
+
+  /* Card specific styles */
+  .winner .icon-container {
+    background-color: rgba(250, 204, 21, 0.2);
+  }
+  .winner .icon { color: #facc15; }
+  .winner h3 { color: #facc15; }
+
+  .runner-up-1 .icon-container {
+    background-color: rgba(156, 163, 175, 0.2);
+  }
+  .runner-up-1 .icon { color: #d1d5db; }
+  .runner-up-1 h3 { color: #d1d5db; }
+
+
+
+  .runner-up-2 .icon-container {
+    background-color: rgba(180, 83, 9, 0.2);
+  }
+  .runner-up-2 .icon { color: #f8f8f8; }
+  .runner-up-2 h3 { color: #f3f0ed; }
