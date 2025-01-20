@@ -1,19 +1,24 @@
 /* FAQ Section */
 .faq {
-    left:7%;
-    
+    left: 7%;
+    z-index: 50;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 85%;  
-    position:relative;
-    margin-top: 4%;
-    gap:10px;
+    width: 85%;
+    position: relative;
+    margin: 4% 0 5% 0;
+    gap: 10px;
     /* background: linear-gradient(to right, #11121725, #5da9cd80);
     border: 2px solid rgba(255, 255, 255, 0.4); */
     /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); */
     animation: fadeIn 2s ease-out;
+}
+
+#faqs h3 {
+    position: relative;
+
 }
 
 @keyframes fadeIn {
@@ -21,17 +26,18 @@
         opacity: 0;
         transform: scale(0.96);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
-h3{
+h3 {
     text-align: center;
     font-size: 3.5rem;
     font-family: 'Frozen';
-    
+    z-index: 50;
     margin-top: 10%;
     color: #bbdef1;
     text-shadow: 0 0 20px #a3daff, 0 0 40px #4e98b28c;
@@ -39,7 +45,8 @@ h3{
 }
 
 .faq h3 {
-   
+    z-index: 100;
+    border: 1px solid black;
     text-align: center;
     font-size: 3.5rem;
     font-family: 'Frozen';
@@ -52,19 +59,19 @@ h3{
 /* FAQ Box Styling */
 .faqbox {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-  position: relative;
+    position: relative;
     background: linear-gradient(to right, #3ed6fc4d, #3eafc3bd);
-    
+
     border-radius: 15px;
     margin-bottom: 15px;
     cursor: pointer;
     transition: transform 0.5s ease, background 0.3s ease, box-shadow 0.5s ease;
     width: 90%;
     padding: 5px;
-    gap:20%;
-   
+    gap: 20%;
+
 }
 
 .faqbox:hover {
@@ -77,7 +84,7 @@ h3{
 .faqbox span {
     font-size: 1.4rem;
     color: #e0f7ff;
-   flex: 1;
+    flex: 1;
 }
 
 /* Image Styling */
@@ -123,6 +130,7 @@ h3{
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -139,16 +147,21 @@ h3{
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;  /* Align the content vertically */
-        justify-content: space-between;  /* Space between the image and the text */
+        align-items: center;
+        /* Align the content vertically */
+        justify-content: space-between;
+        /* Space between the image and the text */
         padding: 15px;
-        height: auto; /* Adjusts height based on content */
+        height: auto;
+        /* Adjusts height based on content */
     }
 
     .faqbox svg {
         position: absolute;
-        right: 40px; /* Align SVG to the right */
-        top: 50%; /* Center vertically */
+        right: 40px;
+        /* Align SVG to the right */
+        top: 50%;
+        /* Center vertically */
         transform: translateY(-50%);
         transition: transform 0.3s ease-in-out;
     }
@@ -160,7 +173,7 @@ h3{
         flex-grow: 1;
     }
 
-    img {
+    .image {
         max-width: 80px;
         height: auto;
         margin-right: 15px;
@@ -178,8 +191,10 @@ h3{
         padding: 15px;
         margin-top: -10%;
         margin-bottom: 0%;
-        margin-left: 13%; /* Align with the container */
-        position: relative; /* Makes sure answer is placed inside the box */
+        margin-left: 13%;
+        /* Align with the container */
+        position: relative;
+        /* Makes sure answer is placed inside the box */
     }
 
     /* Optional: Add some style for the sliding transition of the answer */
@@ -188,6 +203,7 @@ h3{
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -197,7 +213,8 @@ h3{
 
 @media (max-width: 830px) and (min-width: 769px) {
     .faq h3 {
-        font-size: 2.5rem;  /* Slightly smaller heading */
+        font-size: 2.5rem;
+        /* Slightly smaller heading */
     }
 
     .faqbox {
@@ -213,19 +230,22 @@ h3{
         right: 14px;
         top: 47%;
         transform: translateY(-50%);
-        width: 28px;  /* Slightly smaller SVG */
+        width: 28px;
+        /* Slightly smaller SVG */
         height: 28px;
         fill: #a3daff;
         transition: transform 0.3s ease-in-out;
     }
 
     .faqbox span {
-        font-size: 1.4rem;  /* Adjust text size for better readability */
+        font-size: 1.4rem;
+        /* Adjust text size for better readability */
         margin-left: -48px;
     }
 
-    img {
-        max-width: 80px;  /* Make the image slightly smaller */
+    .image {
+        max-width: 80px;
+        /* Make the image slightly smaller */
         height: auto;
     }
 
@@ -249,6 +269,7 @@ h3{
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -257,9 +278,10 @@ h3{
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .faq h3 {
-        font-size: 2.2rem;  /* Smaller heading for better fit */
+        font-size: 2.2rem;
+        /* Smaller heading for better fit */
     }
 
     .faqbox {
@@ -269,7 +291,8 @@ h3{
         justify-content: space-between;
         padding: 12px;
         height: auto;
-        margin-bottom: 10px; /* Space between FAQ items */
+        margin-bottom: 10px;
+        /* Space between FAQ items */
 
     }
 
@@ -277,23 +300,27 @@ h3{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 28px;  /* Smaller icon for balance */
+        width: 28px;
+        /* Smaller icon for balance */
         height: 28px;
         fill: #a3daff;
         transition: transform 0.3s ease-in-out;
-        right: 10px; /* Adjust position slightly */
+        right: 10px;
+        /* Adjust position slightly */
     }
 
     .faqbox span {
-        font-size: 1.4rem;  /* Adjust text size */
+        font-size: 1.4rem;
+        /* Adjust text size */
         margin-left: -10%;
         margin-right: 0;
         flex-grow: 1;
     }
 
-    img {
-        max-width: 70px;  /* Reduce image size for better fitting */
-        height: auto;   
+    .image {
+        max-width: 70px;
+        /* Reduce image size for better fitting */
+        height: auto;
     }
 
     .answer {
@@ -315,6 +342,7 @@ h3{
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -323,9 +351,14 @@ h3{
 }
 
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
     .faq h3 {
-        font-size: 2.2rem;  /* Smaller heading for better fit */
+        font-size: 2.2rem;
+        /* Smaller heading for better fit */
+    }
+
+    #faqs {
+        width: 100vw;
     }
 
     .faqbox {
@@ -335,7 +368,8 @@ h3{
         justify-content: space-between;
         padding: 12px;
         height: auto;
-        margin-bottom: 10px; /* Space between FAQ items */
+        margin-bottom: 10px;
+        /* Space between FAQ items */
 
     }
 
@@ -343,21 +377,25 @@ h3{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 20px;  /* Smaller icon for balance */
+        width: 20px;
+        /* Smaller icon for balance */
         height: 20px;
         fill: #a3daff;
         transition: transform 0.3s ease-in-out;
-        right: 10px; /* Adjust position slightly */
+        right: 10px;
+        /* Adjust position slightly */
     }
 
     .faqbox span {
-        font-size: 0.8rem;  /* Adjust text size */
+        font-size: 0.8rem;
+        /* Adjust text size */
         margin-right: 28px;
     }
 
-    img {
-        max-width: 70px;  /* Reduce image size for better fitting */
-        height: auto;   
+    .image {
+        max-width: 70px;
+        /* Reduce image size for better fitting */
+        height: auto;
     }
 
     .answer {
@@ -380,6 +418,7 @@ h3{
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -387,9 +426,10 @@ h3{
     }
 }
 
-@media (max-width: 420px) and (min-width:320px){
+@media (max-width: 420px) and (min-width:320px) {
     .faq h3 {
-        font-size: 2.2rem;  /* Smaller heading for better fit */
+        font-size: 2.2rem;
+        /* Smaller heading for better fit */
     }
 
     .faqbox {
@@ -399,7 +439,8 @@ h3{
         justify-content: space-between;
         padding: 12px;
         height: auto;
-        margin-bottom: 10px; /* Space between FAQ items */
+        margin-bottom: 10px;
+        /* Space between FAQ items */
         width: 90%;
 
     }
@@ -408,22 +449,26 @@ h3{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 20px;  /* Smaller icon for balance */
+        width: 20px;
+        /* Smaller icon for balance */
         height: 20px;
         fill: #a3daff;
         transition: transform 0.3s ease-in-out;
-        right: 10px; /* Adjust position slightly */
+        right: 10px;
+        /* Adjust position slightly */
     }
 
     .faqbox span {
-        font-size: 0.7rem;  /* Adjust text size */
+        font-size: 0.7rem;
+        /* Adjust text size */
         margin-right: 28px;
         margin-left: -35px;
     }
 
-    img {
-        max-width: 70px;  /* Reduce image size for better fitting */
-        height: auto;   
+    .image {
+        max-width: 70px;
+        /* Reduce image size for better fitting */
+        height: auto;
     }
 
     .answer {
@@ -446,6 +491,7 @@ h3{
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
