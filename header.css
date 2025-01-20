@@ -1,4 +1,3 @@
-
 /* Header styles */
 
 .site-header {
@@ -14,19 +13,19 @@
     /* background: linear-gradient(to right, #5c8cac, #226075); */
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0, 51, 78, 0.5);
-    z-index: 10;
+    z-index: 999;
     font-family: 'Iceberg', sans-serif;
     padding: 0 20px;
 }
 
-h1#scroll-heading {
+/* h1#scroll-heading {
     margin-top: 14vmin;
     position: fixed;
     left: 50%;
     top: 20%;
     transform: translate(-50%, -50%);
     z-index: 4;
-}
+} */
 
 .navigation {
     z-index: 1001;
@@ -46,7 +45,8 @@ h1#scroll-heading {
 .navigation {
     display: flex;
     gap: 20px;
-    transition: right 0.3s ease-in-out; /* Added for smooth animation */
+    transition: right 0.3s ease-in-out;
+    /* Added for smooth animation */
 }
 
 .navigation a {
@@ -152,8 +152,12 @@ h1#scroll-heading {
 
 /* Further Responsiveness */
 @media screen and (max-width: 576px) {
+
+    /* body{
+        width: 100%;
+    } */
     .navigation {
-        width: 80%;
+        display: none;
     }
 
     .navigation a {
@@ -162,6 +166,15 @@ h1#scroll-heading {
 
     .logo {
         font-size: 2rem;
+    }
+
+    .site-header {
+        width: 100vw;
+        position: sticky;
+        top: 0%;
+        background: rgba(255, 255, 255, 0.181);
+        height: 10%;
+        /* z-index: 10; */
     }
 
     .menu-toggle {
@@ -187,6 +200,7 @@ h1#scroll-heading {
         width: 20px;
         height: 16px;
     }
+
 }
 
 /*cards*/
@@ -194,22 +208,22 @@ h1#scroll-heading {
     width: 300px;
     height: 300px;
     perspective: 1000px;
-  }
-  
-  .card-inner {
+}
+
+.card-inner {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
-  }
-  
-  .card:hover .card-inner {
+}
+
+.card:hover .card-inner {
     transform: rotateY(180deg);
-  }
-  
-  .card-front,
-  .card-back {
+}
+
+.card-front,
+.card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -221,26 +235,28 @@ h1#scroll-heading {
     font-size: 16px;
     font-family: Arial, sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  }
-  
-  .card-front img,
-  .card-back img {
+}
+
+.card-front img,
+.card-back img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 5;
-  }
-  
-  .card-back {
+}
+
+.card-back {
     transform: rotateY(180deg);
-  }
-  .card-front span,
-  .card-back span {
-    color: #def7ff; /* Replace with your desired color code */
+}
+
+.card-front span,
+.card-back span {
+    color: #def7ff;
+    /* Replace with your desired color code */
     font-size: 16px;
     /* font-family: ; */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  }
+}
 
-  /*HEADER ENDS HERE*/
+/*HEADER ENDS HERE*/

@@ -1,50 +1,64 @@
 /* About Section Styles */
 .about {
-    position: absolute; /* Position it relative to the viewport */
-    width: 90vw; /* Use the full width of the viewport */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 40px; /* Padding for inner spacing */
+    position: relative;
+    width: 90vw;
+    max-width: 1200px;
+    padding: 40px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
         0 0 64px rgba(87, 201, 255, 0.1);
+    margin: 5% auto;
+    margin-bottom: 5rem;
+    transition: transform 0.3s ease;
     z-index: 5;
-    left: 0; /* Align to the left of the viewport */
-    top: 90%; /* Adjust this value as needed */
-    margin-left: 5%;
-    margin-top: 15%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .abouthackstreet {
-    text-align: center;
-    padding: 20px;
-    width: 100%; /* Ensure full width of parent */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .abouthackstreet h1 {
     position: relative;
-    font-size: 3rem;
-    margin-bottom: 30px;
+    left: 0;
+    right: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     background: linear-gradient(120deg, #fff, #87CEFA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    text-shadow: 
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.2;
+    text-shadow:
         0 0 20px rgba(135, 206, 250, 0.5),
         0 0 40px rgba(135, 206, 250, 0.3);
     animation: titlePulse 3s ease-in-out infinite alternate;
-    position: static;
 }
 
 .abouthackstreet p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 100%;
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding: 0 20px;
 }
@@ -55,14 +69,112 @@
         opacity: 0.8;
         transform: scale(1);
     }
+
     100% {
         opacity: 1;
         transform: scale(1.05);
     }
 }
 
-/* Hover effect for the about section */
+/* Hover effect */
 .about:hover {
     transform: scale(1.02);
-    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1200px) {
+    .about {
+        width: 80vw;
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .about {
+        width: 85vw;
+        padding: 35px;
+    }
+
+    .abouthackstreet h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about {
+        width: 90vw;
+        padding: 30px;
+    }
+
+    .abouthackstreet h1 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+
+    .abouthackstreet p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        margin-top: 80%;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .abouthackstreet h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .abouthackstreet p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .about {
+        width: 100vw;
+        margin-top: 20%;
+        padding: 20px;
+        margin: 10%;
+    }
+
+    .abouthackstreet h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .abouthackstreet p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about {
+        margin-top: 80%;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .abouthackstreet h1 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+
+    .abouthackstreet p {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+}
+
+@media (hover: none) {
+    .about:hover {
+        transform: none;
+    }
 }
