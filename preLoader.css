@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    
 }
 
 /* Preloader container */
@@ -14,10 +15,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 11;
+    z-index: 110;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    
     
 }
 
@@ -33,6 +35,7 @@ body {
     max-width: 180px;
     height: auto;
     animation: fadeInOut 2s ease forwards;
+    z-index: 110;
 }
 
 /* Responsive image sizes for different screens */

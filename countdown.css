@@ -135,64 +135,81 @@
 
 
 @media screen and (max-width: 480px) {
-  .countdown-container {
-    display: flex;
-    flex-direction: column;
-    /* Ensure vertical stacking */
-    align-items: center;
-    /* Center-align items */
-    justify-content: center;
-    /* Align items within the container */
-    height: 30%;
-    width: 70%;
-  }
-
-  .coming-soon-div {
-    margin: 5%;
-  }
-
-
-  .coming-soon {
-    font-size: 1.5rem;
-    position: relative;
-    /* top: 10%;  */
-    letter-spacing: 0.1em;
-    /* Subtle spacing */
-    margin: 0;
-    /* Remove all margins */
-    padding: 0;
-    /* Remove extra spacing */
-  }
-
-  #countdown {
-    display: flex;
-    flex-wrap: wrap;
-    /* Ensure countdown items wrap if needed */
-    gap: 0.5rem;
-    /* Space between countdown items */
-    justify-content: center;
-    /* Center the items horizontally */
-    width: 70%;
-    /* Occupy full width */
-    align-items: center;
-    margin: auto;
-  }
-
-  .countdown-item {
-    width: 1rem;
-    padding: 0.5rem;
-    /* Adjust inner padding */
-    text-align: center;
-  }
-
-  .number {
-    font-size: 1rem;
-    /* Adjust number size */
-  }
-
-  .label {
-    font-size: 0.5rem;
-    /* Adjust label size */
-    letter-spacing: 0.1em;
-  }
+  
+    .countdown-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%; /* Narrower width for the full box */
+      padding: 1rem; /* Inner padding for spacing */
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 64px rgba(87, 201, 255, 0.1);
+      margin: 2rem auto; /* Center the container with vertical spacing */
+      box-sizing: border-box; /* Include padding in dimensions */
+    }
+  
+    .coming-soon {
+      font-size: 1.8rem; /* Slightly larger font for emphasis */
+      letter-spacing: 0.2em; /* Maintain subtle spacing */
+      text-align: center;
+      background: linear-gradient(120deg, #fff, #87CEFA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: titleGlow 3s ease-in-out infinite alternate;
+      margin-bottom: 1rem; /* Add spacing below the title */
+      top:12%;
+    }
+  
+    #countdown {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for grid */
+      gap: 1rem; /* Space between items */
+      list-style: none;
+      margin-top: 20%; /* Remove extra margins */
+      padding: 0;
+      justify-items: center; /* Center-align grid items */
+      align-items: center; /* Vertically align items */
+      width: 100%; /* Fit to container width */
+    }
+  
+    .countdown-item {
+      width: 65px; /* Narrower box size */
+      height: 65px; /* Equal height for symmetry */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+      padding: 0.5rem; /* Inner padding for spacing */
+      box-sizing: border-box;
+    }
+  
+    .number {
+      font-size: 1.1rem; /* Slightly larger for readability */
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(to bottom, #1a1f36, #283048);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(135, 206, 250, 0.5),
+        0 0 40px rgba(135, 206, 250, 0.3);
+    }
+  
+    .label {
+      font-size: 0.55rem; /* Slightly larger label */
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.947);
+      font-weight: 300;
+    }
+  
 }

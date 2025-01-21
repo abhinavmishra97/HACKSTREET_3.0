@@ -344,7 +344,9 @@
   }
 
   .container_timeline {
-    width: 100vw;
+    width: 80vw;
+    bottom:10%;
+    margin-top: 30%;
   }
 
   .connector-line {

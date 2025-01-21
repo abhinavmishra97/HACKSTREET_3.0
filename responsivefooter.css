@@ -276,7 +276,7 @@
   }
 
   .footer .social-icons {
-    gap: 6px;
+    gap: 12px;
     /* Reduced gap between icons */
     margin-top: 5px;
     /* Minimal space above social icons */
@@ -286,5 +286,6 @@
     width: 20px;
     /* Smaller icon size */
     height: 20px;
+    margin-left:2%;
   }
 }
