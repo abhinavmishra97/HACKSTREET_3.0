@@ -243,7 +243,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 /*HEADER JS ENDS*/
 
 
-/*TIMELINE JS STARTS*/
+// /TIMELINE JS STARTS/
 
 const events = [
     {
@@ -255,7 +255,7 @@ const events = [
     {
       title: "Hacking Period Starts",
       date: "1st February, 2025",
-      time: "11:00 AM onwards",
+      time: "12:00 PM onwards",
       description: "Begin your innovative journey!"
     },
     {
@@ -267,19 +267,19 @@ const events = [
     {
       title: "Hacking Period Ends",
       date: "2nd February, 2025",
-      time: "6:00 PM",
+      time: "12:00 PM",
       description: "Time to wrap up your projects"
     },
     {
       title: "Project Submission",
       date: "2nd February, 2025",
-      time: "6:00 PM - 6:30 PM",
+      time: "12:00 PM - 1:00 PM",
       description: "Submit your final project"
     },
     {
       title: "Final Evaluation",
       date: "2nd February, 2025",
-      time: "6:30 PM onwards",
+      time: "1:00 PM onwards",
       description: "Present your complete project to the judges"
     }
   ];
@@ -367,6 +367,8 @@ const events = [
 
   document.addEventListener('DOMContentLoaded', initializeTimeline);
 
+
+
   /*TIMELINE JS ENDS*/
 
   /* PRICEPOOL JS*/
@@ -439,3 +441,20 @@ window.addEventListener("load", function () {
 
 
 // preloader js ends
+
+// landing button js
+
+document.querySelectorAll('.landing-buttons button').forEach(button => {
+  button.addEventListener('mouseover', () => {
+    button.style.boxShadow = '0 0 20px 5px rgba(102, 204, 255, 0.7)';
+  });
+
+  button.addEventListener('mouseout', () => {
+    button.style.boxShadow = '0 3px 10px rgba(0, 0, 0, 0.3)';
+  });
+
+  button.addEventListener('click', () => {
+    alert(`${button.textContent} button clicked!`);
+  });
+});
+// landing button js ends

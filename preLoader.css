@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    
 }
 
 /* Preloader container */
@@ -31,8 +30,8 @@ body {
 
 /* Image styling */
 #preloader img {
-    width: 100%;
-    max-width: 180px;
+    width: 300%;
+    max-width: 470px;
     height: auto;
     animation: fadeInOut 2s ease forwards;
     z-index: 110;
@@ -54,7 +53,7 @@ body {
 /* Extra small devices */
 @media screen and (max-width: 320px) {
     #preloader img {
-        max-width: 100px;
+        max-width: 200px;
     }
 }
 

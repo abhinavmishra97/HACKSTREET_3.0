@@ -267,6 +267,58 @@ h1 {
 
 
 
+
+
+/* landing buttons styles */
+
+
+.landing-buttons{
+  width: 100%;
+ 
+  z-index: 3;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  
+}
+
+.landing-buttons button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(145deg, #66b9cf, #6bb9d3);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.landing-buttons button a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-buttons button:hover {
+  background: linear-gradient(145deg, #66ccff, #99e6ff);
+  color: #003366;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.landing-buttons button:hover a {
+  color: #003366; /* Ensure link color changes on hover */
+}
+
+.landing-buttons button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* end of landing buttons styles */
+
+
 /* For Mobile (max-width: 480px) */
 @media (max-width: 430px) {
 
@@ -282,6 +334,54 @@ h1 {
   .landing-buttons button {
     width: 35%;
   }
+
+  .landing-buttons{
+    width: 100%;
+   
+    z-index: 5;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+    
+  }
+  
+  .landing-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(145deg, #66b9cf, #6bb9d3);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width:30vw;
+    height:6vh;
+    
+  }
+  
+  .landing-buttons button a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .landing-buttons button:hover {
+    background: linear-gradient(145deg, #66ccff, #99e6ff);
+    color: #003366;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .landing-buttons button:hover a {
+    color: #003366; /* Ensure link color changes on hover */
+  }
+  
+  .landing-buttons button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  
 
   .section {
     background-size: 120% 120%;
@@ -324,8 +424,9 @@ h1 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 3;
+    z-index: 5;
     transition: opacity 1s ease;
+    
   }
 
   /* .white-background{
@@ -383,3 +484,5 @@ h1 {
     transition: opacity 1s ease;
   }
 }
+
+

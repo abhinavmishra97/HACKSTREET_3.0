@@ -32,9 +32,6 @@
 }
 
 /* Ensure overlay is above most elements but below navigation */
-.overlay {
-    z-index: 99;
-}
 
 .logo {
     font-size: 2.5rem;
@@ -99,13 +96,14 @@
 /* Overlay */
 .overlay {
     position: fixed;
-    top: 0;
+    top: 10%;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
+    z-index: 3400;
 }
 
 .overlay.active {
@@ -184,9 +182,22 @@
 }
 
 @media screen and (max-width: 375px) {
+    
+    
     .navigation {
-        width: 90%;
+        position: absolute;
+        top: 0;
+        right: 0%;
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #226075, #5c8cac);
+        gap: 30px;
+        box-shadow: -5px 0 15px rgba(0, 51, 78, 0.5);
     }
+
 
     .navigation a {
         font-size: 1.2rem;
@@ -196,17 +207,28 @@
         font-size: 1.8rem;
     }
     .site-header {
+        position: absolute;
         width: 100vw;
         position: sticky;
         top: 0%;
         background: rgba(255, 255, 255, 0.181);
         height: 10%;
         /* z-index: 10; */
+
     }
     .menu-toggle {
         width: 20px;
         height: 16px;
+        z-index:100;
     }
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+        height:100%;
+        
+        
+   
+
 
 }
 
