@@ -97,7 +97,7 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media (min-width:480px) and (max-width: 768px) {
   .countdown-container {
     padding: 0rem 0rem;
     width: 80%;

@@ -149,7 +149,10 @@
 }
 
 /* Further Responsiveness */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
+    header.site-header{
+        width:200vw;
+    }
 
     /* body{
         width: 100%;
@@ -181,7 +184,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
     
     
     .navigation {
@@ -230,6 +233,6 @@
    
 
 
-}
+} */
 
 /*cards*/

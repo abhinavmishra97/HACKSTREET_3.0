@@ -24,7 +24,7 @@
 
 html {
     scroll-padding-top: 150px; /* Adjust this to control the offset when clicking "About" */
-  }
+}
 
 .abouthackstreet {
     width: 100%;
@@ -121,7 +121,7 @@ html {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width:575px) and (max-width: 767px) {
     .about {
         margin-top: 80%;
         width: 100%;
@@ -140,9 +140,9 @@ html {
     }
 }
 
-@media screen and (max-width: 575px) {
+@media (min-width:480px) and (max-width: 575px) {
     .about {
-        width: 80vw;
+        width: 200%;
         margin-top: 20%;
         padding: 20px;
         margin: 10%;
@@ -159,15 +159,15 @@ html {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .about {
         margin-top: 80%;
-        width: 80vw;
+        width: 100vw;
         padding: 15px;
     }
 
     .abouthackstreet h1 {
-        font-size: 1.6rem;
+        font-size: 1rem;
         margin-bottom: 12px;
     }
 

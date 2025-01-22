@@ -104,7 +104,7 @@ body::after {
 }
 
 /* Gradient Animation */
-@keyframes gradient-animation {
+/* @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
   }
@@ -116,7 +116,7 @@ body::after {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 /* Snowfall Styles */
 .hidden {
@@ -320,7 +320,7 @@ h1 {
 
 
 /* For Mobile (max-width: 480px) */
-@media (max-width: 430px) {
+@media (max-width: 480px) {
 
   * {
     max-width: 100vw;
@@ -437,7 +437,7 @@ h1 {
 
 /* for tablet */
 
-@media(min-width:430px) and (max-width:768px) {
+@media(min-width:480px) and (max-width:768px) {
   #scroll-heading {
     background: url(./assets/icygradient.jpg);
     position: fixed;
@@ -446,10 +446,10 @@ h1 {
     -webkit-background-clip: text;
     color: transparent;
     user-select: none;
-    width: 100vw;
+    
     /* overflow-x: hidden; */
     top: 10%;
-    font-size: 20;
+    font-size: 90px;
     font-family: 'Frozen';
     z-index: 3;
     transition: transform 0.1s ease, opacity 0.1s ease;
@@ -478,10 +478,11 @@ h1 {
     position: absolute;
     top: 10%;
     left: 0;
-    width: 100%;
+    width: 200%;
     height: auto;
     z-index: 4;
     transition: opacity 1s ease;
+    overflow-x:hidden;
   }
 }
 

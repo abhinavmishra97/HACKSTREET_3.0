@@ -11,7 +11,7 @@
   padding: 0 20px;
   position: relative;
   z-index: 5;
-  overflow: visible;
+  overflow-x: hidden;
 }
 
 .title {
@@ -292,7 +292,19 @@
   to { transform: rotate(360deg); }
 }
 
-@media (max-width: 768px) {
+@media (min-width:480px)and (max-width: 768px) {
+  .container_timeline {
+    width: 200%;
+    max-width: 1200px;
+    margin: 10% auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+    overflow: visible;
+  }
+  /*.container_timeline{
+    width:400%;
+  }
   .title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -329,9 +341,9 @@
 
   .snowflake {
     animation: spin 4s linear infinite;
-  }
-}
-@media (max-width: 430px) {
+  }*/
+} 
+@media (max-width: 480px) {
   .container_timeline {
     padding: 0 15px;
     margin: 5% auto;
