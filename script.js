@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //HEADER
 
 const menuToggle = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector(".navigation");
+    const navigation = document.querySelector(".mobile-navbar");
     const overlay = document.querySelector(".overlay");
 
     menuToggle.addEventListener("click", () => {
