@@ -1,3 +1,4 @@
+
 let snowballInterval;
 let isScrolling = false;
 
@@ -416,34 +417,37 @@ function toggleAnswer(element) {
 
 // preloader js
 
-// Wait for the content to load
+// Wait for the window to fully load
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
   const content = document.getElementById("content");
-  
-  // Prevent scrolling while preloader is active
-  document.body.classList.add('preloader-active');
 
-  // Keep preloader visible for 2.5 seconds, then fade out
+  // Add 'preloader-active' to disable scrolling
+  document.body.classList.add("preloader-active");
+
+  // Keep the preloader visible for 2.5 seconds
   setTimeout(() => {
+      // Start hiding the preloader
       preloader.classList.add("hidden");
-      
 
-
-      // Show content after the preloader fades out
+      // Wait for the fade-out transition to complete
       setTimeout(() => {
-          content.style.display = "block";
-          // Re-enable scrolling
-          document.body.classList.remove('preloader-active');
-      }, 500); // Match the fade-out transition time
-  }, 2500); // Preloader duration (2.5 seconds)
+          // Remove 'preloader-active' to re-enable scrolling
+          document.body.classList.remove("preloader-active");
+
+          // Show the main content (if needed)
+          if (content) {
+              content.style.display = "block";
+          }
+      }, 500); // Match the CSS transition time for fading out
+  }, 2500); // Total preloader duration
 });
+
 
 
 // preloader js ends
 
 // landing button js
-
 document.querySelectorAll('.landing-buttons button').forEach(button => {
   button.addEventListener('mouseover', () => {
     button.style.boxShadow = '0 0 20px 5px rgba(102, 204, 255, 0.7)';
@@ -454,7 +458,13 @@ document.querySelectorAll('.landing-buttons button').forEach(button => {
   });
 
   button.addEventListener('click', () => {
-    alert(`${button.textContent} button clicked!`);
+    const link = button.getAttribute('data-link'); // Get the link from the data-link attribute
+    if (link) {
+      window.open(link, '_blank'); // Open the link in a new tab
+    }
   });
 });
+
+
+
 // landing button js ends

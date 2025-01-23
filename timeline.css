@@ -5,6 +5,7 @@
 }
 
 .container_timeline {
+  overflow-y:hidden;
   width: 100%;
   max-width: 1200px;
   margin: 10% auto;
@@ -345,14 +346,15 @@
 } 
 @media (max-width: 480px) {
   .container_timeline {
+    
     padding: 0 15px;
-    margin: 5% auto;
+    
     width: 100%;
     overflow-x: hidden;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   
   .timeline {

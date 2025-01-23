@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="./responsivefaq.css">
   <link rel="stylesheet" href="./responsivefooter.css">
   <link rel="stylesheet" href="preLoader.css">
+ 
 </head>
 
 <body>
@@ -43,17 +44,21 @@
     <nav class="navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#themes">Themes</a>
+      <a href="#title">Timeline</a>
       <a href="#container">Prize</a>
       <a href="#faqs">FAQs</a>
+      
       
     </nav>
     <div class="overlay"></div>
     
   </header>
-
   <div class="mobile-navbar">
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#themes">Themes</a>
+    <a href="#title">Timeline</a>
     <a href="#container">Prize</a>
     <a href="#faqs">FAQs</a>
   </div>
@@ -68,9 +73,10 @@
   <br />
   <div class="content">
     <!-- Content goes here -->
-    <div class="landing-buttons">
-      <button><a href="">Devfolio</a></button><button><a href="">Discord</a></button>
-    </div>
+ <div class="landing-buttons">
+  <button data-link="">Devfolio</button>
+  <button data-link="">Discord</button>
+</div>
 
   </div>
 
@@ -132,7 +138,7 @@
 
   <!-- CARDS HTML -->
   <section class="cards-container">
-    <h2>THEMES</h2>
+    <h2 id="themes">THEMES</h2>
     <div class="cards-wrapper">
       <!-- Card 1 -->
       <div class="card_style">
@@ -216,7 +222,7 @@
 
   <!--TIMELINE HTML-->
   <div class="container_timeline">
-    <h2 class="title">TIMELINE</h2>
+    <h2 class="title" id="title">TIMELINE</h2>
     <div class="timeline" id="timeline"></div>
   </div>
 

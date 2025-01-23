@@ -161,7 +161,7 @@ html {
 
 @media screen and (max-width: 480px) {
     .about {
-        margin-top: 80%;
+        margin-top: 30%;
         width: 100vw;
         padding: 15px;
     }
