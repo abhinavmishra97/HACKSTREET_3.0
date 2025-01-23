@@ -111,7 +111,7 @@
 /* Text Styles */
 .card-front span {
   color: rgb(223, 223, 241);
-  font-size: 20px;
+  
   font-family: 'Silkscreen', sans-serif;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -122,7 +122,7 @@
 .card-back span {
   margin-left: 20px;
   color: rgb(228, 228, 241);
-  font-size: 16px;
+  
   font-family: 'Silkscreen', sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 8;
@@ -151,10 +151,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    
     backface-visibility: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction:column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
     font-size: 16px;
     font-family: Arial, sans-serif;
@@ -176,11 +179,24 @@
 
 .card-front span,
 .card-back span {
+  margin-top:0%;
+    text-align: center;
+    
     color: #def7ff;
     /* Replace with your desired color code */
-    font-size: 16px;
+    
     /* font-family: ; */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.maintext{
+  font-size: 25px;
+}
+.info{
+  opacity:0;
+  font-size:0%;
+  z-index: 0;
+  height:0px;
+
 }
 
 /*HEADER ENDS HERE*/
@@ -225,15 +241,23 @@
   }
   .card-front{
     overflow:hidden;
+    align-items: center;
+    text-align: center;
     animation:none;
+    display:flex;
+   
+    flex-direction: column;
+    overflow-wrap:break-word;
+    gap:11px;
   }
   .cards-container {
 
     width:500px ;
-    height: 2700px;
+    height: 1800px;
     margin: auto;
     z-index: 4;
     animation:none;
+    align-items: center;
   }
   .card-hover-area {
     animation:none;
@@ -248,11 +272,12 @@
     overflow:hidden;
     margin:auto;
     width: 500px;
-    height: 2000px;
+    height: 1600px;
     display: flex;
     flex-direction: column;
     gap: 50px;
     top: 8%;
+    align-items:center;
   }
 
   .card {
@@ -260,13 +285,35 @@
     position: relative;
   }
 
+  .info{
+    opacity:1;
+    
+    z-index: 100;
+    color: white;
+      font-size: 19px;
+      font-family: Arial, sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      align-items: center;
+     
+      text-align:center;
+      overflow-wrap:break-word;
+      height:auto;
+      font-family: 'Silkscreen', sans-serif;
+  }
+  .maintext{
+    font-size: 25px;
+    font-family: 'Silkscreen', sans-serif;
+  }
+  
   .card-hover-area {
     isolation: isolate;
+    animation:none;
   }
 
   .card-inner {
     isolation: isolate;
     overflow:hidden;
+    animation:none;
   }
   .card-back {
     animation:none;

@@ -50,7 +50,7 @@ body.preloader-active {
 
 @media screen and (max-width: 480px) {
     #preloader img {
-        max-width: 120px;
+        max-width: 420px;
     }
 }
 

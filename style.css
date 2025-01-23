@@ -280,7 +280,7 @@ h1 {
   padding: 10px 20px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: rgb(28, 6, 154); /* Ensure the text color is visible */
+  color: rgb(255, 255, 255); /* Ensure the text color is visible */
   background: linear-gradient(145deg, #66b9cf, #6bb9d3);
   border: none;
   border-radius: 25px;
