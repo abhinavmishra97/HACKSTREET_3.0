@@ -13,6 +13,7 @@
   position: relative;
   z-index: 5;
   overflow-x: hidden;
+  height: 230%
 }
 
 .title {
