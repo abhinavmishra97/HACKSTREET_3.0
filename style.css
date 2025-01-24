@@ -290,9 +290,10 @@ h1 {
 }
 
 /* devfolio button  */
-.apply-button {
+/* .apply-button {
   display: none;
-}
+} */
+
 .discord-btn:hover {
   transform: scale(1.03);
   /* Slightly increased scaling for better visibility */
