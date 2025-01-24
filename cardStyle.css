@@ -97,7 +97,7 @@
 }
 
 .card-back {
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
 
 /* Images */
@@ -207,8 +207,9 @@
 
 @media (max-width: 480px) {
   
-  .card:hover .card-inner {
+  .card:active .card-inner:active {
     animation:none;
+    transform: none;
 }
   .cards-container h2 {
     position: absolute;
@@ -252,6 +253,7 @@
     overflow-wrap:break-word;
     gap:11px;
   }
+
   .cards-container {
 
     width:500px ;
@@ -310,15 +312,18 @@
   .card-hover-area {
     isolation: isolate;
     animation:none;
+    transform: none;
+    transform: none !important;
+      transition: none !important;
   }
-
-  .card-inner {
-    isolation: isolate;
-    overflow:hidden;
-    animation:none;
-  }
+.card:hover .card-inner {
+  transform: none !important;
+  transition: none !important;
+}
   .card-back {
     animation:none;
+    transform: none;
+    display: none;
 }
 
 }
