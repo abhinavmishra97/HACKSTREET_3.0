@@ -289,6 +289,10 @@ h1 {
   transition: transform 0.3s ease-in-out, background-image 0.4s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* devfolio button  */
+.apply-button {
+  display: none;
+}
 .discord-btn:hover {
   transform: scale(1.03);
   /* Slightly increased scaling for better visibility */
@@ -360,6 +364,11 @@ h1 {
   .apply-btn, .discord-btn{
     margin: 4%;
   }
+
+    /* devfolio button  */
+    .apply-button {
+      display: none;
+    }
 
   .landing-buttons{
     width: 100vw;
