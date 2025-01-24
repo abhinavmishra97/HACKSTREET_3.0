@@ -79,6 +79,10 @@
   position: relative;
 }
 
+.apply-button{
+  display:none  ;
+}
+
 /* Front and Back */
 .card-front,
 .card-back {
