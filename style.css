@@ -18,7 +18,7 @@ body {
   margin: 0;
   
   height: 100vh;
-
+  width: 100vw;
   align-items: center;
   justify-content: center;
   background: linear-gradient(120deg, #0d1b2a, #28284a, #356b4d);
@@ -261,7 +261,47 @@ h1 {
 
 /* landing buttons styles */
 
+/* DEVFOLIO AND DISCORD BUTTONS */
+.landing-buttons {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 100vw;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
 
+.discord-btn {
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 312px;
+  font-size: 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  background-color: #7289da;
+  border: 2px solid #7289da;
+  color: #fff;
+  transition: transform 0.3s ease-in-out, background-image 0.4s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.discord-btn:hover {
+  transform: scale(1.03);
+  /* Slightly increased scaling for better visibility */
+  background-image: linear-gradient(135deg, #51A9EE, #147BCD);
+  /* Added gradient direction */
+  border-color: #1482D0;
+  cursor: pointer;
+}
+
+.discord-btn:focus {
+  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}
 .landing-buttons {
   position: absolute;
   top: 45%;
@@ -317,13 +357,12 @@ h1 {
     top: 35%;
   }
 
-  .landing-buttons button {
-    width: 35%;
+  .apply-btn, .discord-btn{
+    margin: 4%;
   }
 
   .landing-buttons{
-    width: 100%;
-   
+    width: 100vw;
     z-index: 5;
     transition: transform 0.1s ease, opacity 0.1s ease;
     
