@@ -247,43 +247,43 @@ const menuToggle = document.querySelector(".menu-toggle");
 // /TIMELINE JS STARTS/
 
 const events = [
-    {
-      title: "Registrations",
-      date: "Pre-Event",
-      time: "Until Feb 1st",
-      description: "Register your team for the hackathon"
-    },
-    {
-      title: "Hacking Period Starts",
-      date: "1st February, 2025",
-      time: "12:00 PM onwards",
-      description: "Begin your innovative journey!"
-    },
-    {
-      title: "Mid Evaluation",
-      date: "1st February, 2025",
-      time: "9:00 PM onwards",
-      description: "Present your progress to the judges"
-    },
-    {
-      title: "Hacking Period Ends",
-      date: "2nd February, 2025",
-      time: "12:00 PM",
-      description: "Time to wrap up your projects"
-    },
-    {
-      title: "Project Submission",
-      date: "2nd February, 2025",
-      time: "12:00 PM - 1:00 PM",
-      description: "Submit your final project"
-    },
-    {
-      title: "Final Evaluation",
-      date: "2nd February, 2025",
-      time: "1:00 PM onwards",
-      description: "Present your complete project to the judges"
-    }
-  ];
+  {
+    title: "Registrations",
+    date: "Pre-Event",
+    time: "Until 31st January",
+    description: "Register your team for the hackathon",
+  },
+  {
+    title: "Hacking Period Starts",
+    date: "1st February, 2025",
+    time: "12:00 PM onwards",
+    description: "Begin your innovative journey!",
+  },
+  {
+    title: "Mid Evaluation",
+    date: "1st February, 2025",
+    time: "9:00 PM onwards",
+    description: "Present your progress to the judges",
+  },
+  {
+    title: "Hacking Period Ends",
+    date: "2nd February, 2025",
+    time: "12:00 PM",
+    description: "Time to wrap up your projects",
+  },
+  {
+    title: "Project Submission",
+    date: "2nd February, 2025",
+    time: "12:00 PM - 1:00 PM",
+    description: "Submit your final project",
+  },
+  {
+    title: "Final Evaluation",
+    date: "2nd February, 2025",
+    time: "1:00 PM onwards",
+    description: "Present your complete project to the judges",
+  },
+];
 
   function createSnowflakes() {
     let snowflakes = '';

@@ -270,16 +270,17 @@ h1 {
   transform: translate(-50%, -50%);
   z-index: 10;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.discord-btn {
+.discord-btn, .unstop-btn {
   height: 44px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  width: 312px;
+  width: 20%;
+  margin: 5%;
   font-size: 20px;
   border-radius: 8px;
   font-weight: 600;
@@ -362,8 +363,14 @@ h1 {
     top: 35%;
   }
 
-  .apply-btn, .discord-btn{
+  /* .apply-btn, .discord-btn{
     margin: 4%;
+  } */
+
+  .discord-btn, .unstop-btn {
+    width: 40%;
+    height: 30px;
+    font-size: 0.8rem;
   }
 
     /* devfolio button  */
